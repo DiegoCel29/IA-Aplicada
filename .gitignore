@@ -1,0 +1,17 @@
+# Entorno virtual
+.venv/
+
+# Dataset
+data/*
+!data/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Modelos entrenados
+*.h5
+*.keras
+*.pt
+*.pth
