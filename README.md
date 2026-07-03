@@ -7,12 +7,32 @@ PlantVillage Potato Disease Dataset.
 
 ```
 IA-Aplicada/
-├── data/                 # Dataset (NO versionado, ver abajo)
-├── scripts/              # Scripts auxiliares
-│   └── download_data.py  # Descarga el dataset desde Kaggle
+├── data/                        # Dataset (NO versionado, ver abajo)
+├── scripts/
+│   └── download_data.py         # Descarga el dataset desde Kaggle
+├── results/                     # Resultados guardados (JSON y figuras)
+├── variantes/                   # Variantes experimentales de prueba del AG
+│   ├── AG-CNN_EX1_variante.ipynb
+│   └── AG-CNN_EX2_variante.ipynb
+├── ag_core.py                   # Módulo del AG, Random Search y CNN (reutilizable)
+├── AG-CNN_Comparativa.ipynb     # Corre los experimentos E1–E5 para ambos backbones
+├── AG-CNN_EX1.ipynb             # Experimento con MobileNetV2
+├── AG-CNN_EX2.ipynb             # Experimento con EfficientNetB0
+├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
+
+## Notebooks y scripts
+
+- **`ag_core.py`**: módulo reutilizable con el Algoritmo Genético, el Random
+  Search y las funciones de entrenamiento y evaluación de la CNN.
+- **`AG-CNN_Comparativa.ipynb`**: notebook principal; importa `ag_core` y
+  ejecuta los experimentos E1–E5 (Default, AG y Random Search) sobre
+  MobileNetV2 y EfficientNetB0.
+- **`variantes/`**: versiones de prueba de los notebooks EX1/EX2 con ajustes
+  experimentales (fine-tuning en dos etapas, fitness determinista y learning
+  rate en escala logarítmica). No forman parte de la comparativa principal.
 
 ## Dataset
 
